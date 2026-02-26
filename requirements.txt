@@ -1,7 +1,7 @@
 Jupyter==1.0.0
 black==23.3.0
 matplotlib==3.8.2
-pandas==2.0.3
+pandas==2.3.3
 plotly==5.17.0
 requests==2.31.0
 seaborn==0.12.2
