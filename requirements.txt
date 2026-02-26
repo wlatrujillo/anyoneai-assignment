@@ -8,4 +8,4 @@ seaborn==0.12.2
 SQLAlchemy==1.4.47
 nbformat==5.9.2
 pytest==7.4.0
-numpy==1.26.2
+numpy==1.23.5
