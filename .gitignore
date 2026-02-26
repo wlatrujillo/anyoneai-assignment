@@ -73,3 +73,7 @@ Thumbs.db
 
 # PEP 582
 __pypackages__/
+
+
+# Data
+dataset/
