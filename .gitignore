@@ -77,3 +77,4 @@ __pypackages__/
 
 # Data
 dataset/
+*.db
