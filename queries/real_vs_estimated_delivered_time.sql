@@ -15,3 +15,22 @@
 -- 1. You can use the julianday function to convert a date to a number.
 -- 2. order_status == 'delivered' AND order_delivered_customer_date IS NOT NULL
 -- 3. Take distinct order_id.
+
+
+select 
+    STRFTIME('%m', oo.order_approved_at ) as month_no,
+    avg(
+        julianday(STRFTIME( oo.order_delivered_customer_date  )) - 
+        julianday(STRFTIME( oo.order_purchase_timestamp ))
+    ) as real_time,
+    avg(
+        julianday(STRFTIME( oo.order_estimated_delivery_date )) - 
+        julianday(STRFTIME( oo.order_purchase_timestamp ))
+    ) as estimated_time
+from olist_orders oo 
+where oo.order_status = 'delivered'
+and oo.order_delivered_customer_date is not null
+and oo.order_delivered_customer_date  >= '2016-01-01'
+and oo.order_delivered_customer_date < '2017-01-01'
+group by month_no
+

@@ -15,7 +15,7 @@ from olist_orders oo
     inner join olist_order_payments oop 
     on oo.order_id = oop.order_id 
 where oo.order_status = 'delivered'
-    and oo.order_delivered_customer_date is not null
+and oo.order_delivered_customer_date is not null
 group by oc.customer_state
 order by Revenue desc
 limit 10;
